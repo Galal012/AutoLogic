@@ -40,7 +40,7 @@ const Register: React.FC = () => {
       setLoading(true);
 
       // 1. Call API
-      const response = await authAPI.register(data);
+      await authAPI.register(data);
 
       // 2. Success!
       toast.success(

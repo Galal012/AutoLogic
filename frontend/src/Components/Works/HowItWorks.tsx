@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from 'react-i18next';
 import step1 from "./img-1.d11736ff.jpg";
 import step2 from "./img-2.ec4d0e91.jpg";
@@ -6,7 +5,7 @@ import step3 from "./img-3.fceb8519.jpg";
 import step4 from "./img-4.260c3f82.jpg";
 
 function HowItWorks() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const isRTL = i18n.language === 'ar';
     return (
         <section className={`py-20 ${isRTL ? 'rtl' : 'ltr'}`}>

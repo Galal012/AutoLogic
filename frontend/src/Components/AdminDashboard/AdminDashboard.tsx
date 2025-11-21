@@ -5,8 +5,6 @@ import {
   faChartBar,
   faWrench,
   faCalendar,
-  faStar,
-  faCog,
   faSignOutAlt,
   faUsers,
   faEnvelope,
@@ -17,11 +15,8 @@ import {
 // Import from our new unified API file
 import {
   adminAPI,
-  usersAPI,
   bookingsAPI,
   contactAPI,
-  servicesAPI,
-  blogAPI,
 } from "../../services/api";
 import ServiceManagement from "./ServiceManagement";
 import UserManagement from "./UserManagement";

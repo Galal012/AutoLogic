@@ -6,7 +6,6 @@ import {
   faPlus,
   faEdit,
   faTrash,
-  faEye,
   faSpinner,
   faSearch,
   faToggleOn,
