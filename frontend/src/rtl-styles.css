@@ -1,0 +1,20 @@
+/* RTL Support Styles */
+
+/* Since we use <html dir="rtl">, we don't need manual layout hacks.
+   We only need to ensure the font looks good in Arabic.
+*/
+
+.rtl {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rtl input,
+.rtl textarea,
+.rtl select {
+  text-align: right;
+}
+
+/* Optional: Fix specific directional icons if they don't flip automatically.
+   Most FontAwesome icons don't need flipping, but directional arrows might.
+   Only add specific overrides here if you notice a specific icon pointing the wrong way.
+*/
