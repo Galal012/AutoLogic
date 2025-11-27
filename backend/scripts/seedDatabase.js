@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const bcrypt = require('bcryptjs');
 
 // Load environment variables
-// Note: Make sure your .env file has the correct MONGODB_URI
 dotenv.config({ path: './.env' }); 
 
 const User = require('../models/User');
@@ -163,7 +161,6 @@ const sampleData = {
       name: 'John Doe',
       email: 'johndoe@test.com',
       phone: '1234567890',
-      subject: 'Inquiry about tire pricing',
       message: 'Hi, do you have Michelin tires for a 2020 Honda Civic?',
       type: 'general',
       status: 'new',
@@ -173,7 +170,6 @@ const sampleData = {
       name: 'Jane Smith',
       email: 'jane@test.com',
       phone: '0987654321',
-      subject: 'Appointment Cancellation',
       message: 'I need to cancel my appointment for tomorrow please.',
       type: 'support',
       status: 'resolved',
@@ -198,8 +194,6 @@ const seedDatabase = async () => {
     const users = [];
     for (const userData of sampleData.users) {
       const user = new User(userData);
-      // Hash password manually since we might bypass pre-save if using insertMany,
-      // but here we use save() so the model hook will handle hashing.
       await user.save(); 
       users.push(user);
     }
