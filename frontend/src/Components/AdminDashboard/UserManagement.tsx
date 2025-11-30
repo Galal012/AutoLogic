@@ -352,7 +352,7 @@ const UserManagement: React.FC = () => {
             {users.map((user) => (
               <div
                 key={user._id}
-                className="hover:bg-gray-50 flex justify-between p-6 gap-10"
+                className="relative hover:bg-gray-50 flex flex-col min-[450px]:flex-row justify-between p-6 gap-4 min-[450px]:gap-10"
               >
                 <div className="flex flex-col justify-between items-start gap-4">
                   <div className="whitespace-nowrap">
@@ -383,7 +383,7 @@ const UserManagement: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between items-start gap-4">
-                  <div className="whitespace-nowrap">
+                  <div className="whitespace-nowrap absolute min-[450px]:static top-3 right-3">
                     <div className="flex items-center gap-2">
                       <FontAwesomeIcon
                         icon={
